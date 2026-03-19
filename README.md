@@ -133,10 +133,4 @@ HTML5
 CSS3
 Tailwind CSS
 
-<!-- ================= STRUCTURE ================= -->
-📂 Project Structure
 
-📁 assets/
-📄 index.html
-📄 home.html
-📄 style.css
