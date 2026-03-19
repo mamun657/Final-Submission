@@ -165,11 +165,32 @@ they buy based on how they feel.”
 
 ## 🔚 Final Thoughts
 
-VibeNest is not just a landing page —  
-it’s an attempt to redesign online shopping into something more **human-centered**.
+<img width="1904" height="864" alt="image" src="https://github.com/user-attachments/assets/15e66225-6465-40d1-ae9b-ecc4e90db08a" />
+
+<img width="1912" height="868" alt="image" src="https://github.com/user-attachments/assets/515d504a-fff6-4226-9cd8-55849ef22fab" />
+
+<img width="1913" height="772" alt="image" src="https://github.com/user-attachments/assets/e1761c2c-9ffe-4278-aa62-1bcbaa6323c4" />
+
+<img width="1916" height="888" alt="image" src="https://github.com/user-attachments/assets/a8fe5b74-297b-42cf-af17-da4429e4605c" />
+
+<img width="1915" height="888" alt="image" src="https://github.com/user-attachments/assets/71d11e29-136c-4656-a513-5602959609f6" />
+
+<img width="1906" height="876" alt="image" src="https://github.com/user-attachments/assets/cab4ea00-456e-417f-bcaa-7848d1a6de01" />
+
+<img width="1912" height="855" alt="image" src="https://github.com/user-attachments/assets/0cc9a008-a3a7-4928-a1db-fc0225d588cb" />
+
+<img width="1896" height="858" alt="image" src="https://github.com/user-attachments/assets/b86346bb-d462-4e14-8d1d-d99d507dff12" />
+
+<img width="1912" height="703" alt="image" src="https://github.com/user-attachments/assets/32511631-6eae-4915-9b41-38c905712dac" />
+
+<img width="1904" height="289" alt="image" src="https://github.com/user-attachments/assets/56d16f78-9be2-4fd1-b377-78d1ffdee83a" />
+
+
+
+
+
 
 ---
 
-<p align="center">
-  Made with ❤️ by You
-</p>
+
+
