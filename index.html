@@ -4,28 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VibeNest - Shop Your Mood</title>
-    <link rel="icon" type="image/svg+xml" href="assets/mood-icon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://img.icons8.com/?size=32&id=jS5mnk7bZNpi&format=png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://img.icons8.com/?size=16&id=jS5mnk7bZNpi&format=png">
+    <link rel="shortcut icon" type="image/png" href="https://img.icons8.com/?size=32&id=jS5mnk7bZNpi&format=png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="top"></div>
 
     <!-- ========== HEADER ========== -->
-    <header class="header">
-        <div class="container header-content">
+    <header class="header sticky top-0 z-50 backdrop-blur-xl bg-slate-950/70 border-b border-slate-700/20">
+        <div class="container header-content flex justify-between items-center px-5 py-4">
             <div class="logo">
-                <span class="logo-icon"><img src="assets/mood-icon.svg" alt="Mood icon"></span>
+                <span class="logo-icon">
+                    <img class="logo-image" src="assets/hope.png" alt="VibeNest logo">
+                </span>
                 <span class="logo-text">Vibe<span class="logo-highlight">Nest</span></span>
             </div>
-            <nav class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#mood-section">Shop by Mood</a>
-                <a href="#how-it-works">How It Works</a>
-                <a href="#newsletter">Contact</a>
+            <nav class="nav-links flex gap-8 lg:gap-8 text-sm font-semibold text-slate-300">
+                <a class="hover:text-purple-300 transition-colors duration-300" href="#home">Home</a>
+                <a class="hover:text-purple-300 transition-colors duration-300" href="#mood-section">Shop by Mood</a>
+                <a class="hover:text-purple-300 transition-colors duration-300" href="#how-it-works">How It Works</a>
             </nav>
+
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch theme">🌙</button>
+                <a href="#mood-section" class="cart-chip" aria-label="Cart items">
+                    <span>🛒</span>
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
 
             <input type="checkbox" id="menu-toggle" class="menu-checkbox">
             <label for="menu-toggle" class="hamburger" aria-label="Toggle menu">
@@ -38,7 +50,6 @@
                 <a href="#home">Home</a>
                 <a href="#mood-section">Shop by Mood</a>
                 <a href="#how-it-works">How It Works</a>
-                <a href="#newsletter">Contact</a>
             </nav>
         </div>
     </header>
@@ -56,21 +67,21 @@
                     so choosing feels easy, personal, and genuinely human.
                 </p>
                 <p class="local-trust">Prices localized for Bangladesh 🇧🇩</p>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">95%</span>
-                        <span class="stat-label">Decisions are emotional</span>
+                <div class="hero-stats flex flex-col sm:flex-row lg:flex-row gap-6 md:gap-8 mb-8">
+                    <div class="stat flex flex-col">
+                        <span class="stat-number text-3xl font-black text-purple-500">95%</span>
+                        <span class="stat-label text-sm text-slate-400 font-semibold">Decisions are emotional</span>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number">40x</span>
-                        <span class="stat-label">Less decision fatigue</span>
+                    <div class="stat flex flex-col">
+                        <span class="stat-number text-3xl font-black text-purple-500">40x</span>
+                        <span class="stat-label text-sm text-slate-400 font-semibold">Less decision fatigue</span>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number">4</span>
-                        <span class="stat-label">Mood categories</span>
+                    <div class="stat flex flex-col">
+                        <span class="stat-number text-3xl font-black text-purple-500">4</span>
+                        <span class="stat-label text-sm text-slate-400 font-semibold">Mood categories</span>
                     </div>
                 </div>
-                <a href="#mood-section" class="btn btn-primary">Find My Mood Picks 😊</a>
+                <a href="#mood-section" class="btn inline-flex items-center justify-center btn-primary">Find My Mood Picks 😊</a>
             </div>
             <div class="hero-image">
                 <div class="mood-emoji-float">
@@ -107,21 +118,21 @@
         <div class="container">
             <h2 class="section-title">How It <span class="highlight-text">Works</span></h2>
             <p class="section-subtitle">Shopping made simple in 3 easy steps</p>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
+            <div class="steps-grid flex flex-col md:flex-row gap-8 justify-center">
+                <div class="step-card bg-slate-900/55 backdrop-blur-md p-10 rounded-2xl text-center flex-1 max-w-sm relative border border-slate-600/25 hover:-translate-y-2 hover:scale-[1.03] hover:border-purple-400/55 transition-all duration-300 shadow-xl">
+                    <div class="step-number absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-br from-purple-600 to-violet-500 text-white w-9 h-9 rounded-full flex items-center justify-center font-extrabold text-base">1</div>
                     <div class="step-icon">🎭</div>
                     <h3>Select Your Mood</h3>
                     <p>Tell us how you're feeling today — happy, comfort, adventurous, or romantic.</p>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">2</div>
+                <div class="step-card bg-slate-900/55 backdrop-blur-md p-10 rounded-2xl text-center flex-1 max-w-sm relative border border-slate-600/25 hover:-translate-y-2 hover:scale-[1.03] hover:border-purple-400/55 transition-all duration-300 shadow-xl">
+                    <div class="step-number absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-br from-purple-600 to-violet-500 text-white w-9 h-9 rounded-full flex items-center justify-center font-extrabold text-base">2</div>
                     <div class="step-icon">🎁</div>
                     <h3>Get Curated Products</h3>
                     <p>We'll show you products that truly match how you feel.</p>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
+                <div class="step-card bg-slate-900/55 backdrop-blur-md p-10 rounded-2xl text-center flex-1 max-w-sm relative border border-slate-600/25 hover:-translate-y-2 hover:scale-[1.03] hover:border-purple-400/55 transition-all duration-300 shadow-xl">
+                    <div class="step-number absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-br from-purple-600 to-violet-500 text-white w-9 h-9 rounded-full flex items-center justify-center font-extrabold text-base">3</div>
                     <div class="step-icon">🛍️</div>
                     <h3>Shop & Feel Good</h3>
                     <p>Make a purchase that truly resonates with how you feel right now</p>
@@ -139,26 +150,26 @@
                 <span class="recommendation-label">TODAY'S MOOD RECOMMENDATION</span>
                 <p class="recommendation-value">😊 Happy <span class="recommendation-note">Based on current shopper energy.</span></p>
             </div>
-            <div class="mood-cards">
-                <a href="#happy-products" class="mood-card mood-happy">
+            <div class="mood-cards flex flex-wrap gap-6 justify-center">
+                <a href="#happy-products" class="mood-card p-8 mood-happy">
                     <div class="mood-emoji">😊</div>
                     <h3>Happy</h3>
                     <p>Celebrate your joy!</p>
                     <span class="mood-tag">Party • Colors • Fun</span>
                 </a>
-                <a href="#sad-products" class="mood-card mood-sad">
+                <a href="#sad-products" class="mood-card p-8 mood-sad">
                     <div class="mood-emoji">🤗</div>
                     <h3>Comfort</h3>
                     <p>We're here for you</p>
                     <span class="mood-tag">Comfort • Warmth • Peace</span>
                 </a>
-                <a href="#adventure-products" class="mood-card mood-adventure">
+                <a href="#adventure-products" class="mood-card p-8 mood-adventure">
                     <div class="mood-emoji">🧭</div>
                     <h3>Adventurous</h3>
                     <p>Feed your wanderlust!</p>
                     <span class="mood-tag">Explore • Gear • Thrill</span>
                 </a>
-                <a href="#romantic-products" class="mood-card mood-romantic">
+                <a href="#romantic-products" class="mood-card p-8 mood-romantic">
                     <div class="mood-emoji">💕</div>
                     <h3>Romantic</h3>
                     <p>Express your love</p>
@@ -180,53 +191,56 @@
             </div>
             <div class="products-grid">
                 <div class="product-card card-happy">
-                    <div class="product-badge badge-happy">Bestseller</div>
+                    <div class="product-badge absolute top-4 left-4 px-3.5 py-1.5 rounded-full text-xs font-bold z-10 border tracking-wide badge-happy">Bestseller</div>
                     <div class="product-image">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">&#9825;</button>
                         <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Colorful Party Watch" loading="lazy">
                     </div>
-                    <div class="product-info">
+                    <div class="product-info p-6 text-center flex flex-col items-center flex-1">
                         <h3>Colorful Party Watch</h3>
                         <p>Bright & vibrant watch to match your happy mood</p>
                         <p class="product-emotion">This will brighten your day ✨</p>
-                        <div class="product-price">
-                            <span class="price">৳125</span>
+                        <div class="product-price flex justify-center items-center gap-2 mt-auto mb-4 flex-wrap">
+                            <span class="price text-2xl font-black text-slate-50">৳125</span>
                             <span class="currency-note">BDT</span>
                         </div>
-                        <a class="btn btn-happy" href="https://www.daraz.com.bd/products/-i323056470.html?spm=a2a0e.searchlist.list.35.1932c212NqFqJJ" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
+                        <a class="btn inline-flex items-center justify-center btn-happy" href="https://www.daraz.com.bd/products/-i323056470.html?spm=a2a0e.searchlist.list.35.1932c212NqFqJJ" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
                     </div>
                 </div>
                 <div class="product-card card-happy">
-                    <div class="product-badge badge-happy">Trending</div>
+                    <div class="product-badge absolute top-4 left-4 px-3.5 py-1.5 rounded-full text-xs font-bold z-10 border tracking-wide badge-happy">Trending</div>
                     <div class="product-image">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">&#9825;</button>
                         <img src="https://images.unsplash.com/photo-1583360173899-b3124bc238d9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Beats Party Headphones" loading="lazy">
                     </div>
-                    <div class="product-info">
+                    <div class="product-info p-6 text-center flex flex-col items-center flex-1">
                         <h3>Beats Party Headphones</h3>
                         <p>Premium sound for your celebration playlist</p>
                         <p class="product-emotion">Turn your mood into a soundtrack 🎶</p>
-                        <div class="product-price">
-                            <span class="price">৳14,300</span>
+                        <div class="product-price flex justify-center items-center gap-2 mt-auto mb-4 flex-wrap">
+                            <span class="price text-2xl font-black text-slate-50">৳1,749</span>
                             <span class="currency-note">BDT</span>
-                            <span class="old-price">৳22,000</span>
+                            <span class="old-price text-base text-slate-400 opacity-65 ml-1 line-through">৳2,200-20%</span>
                         </div>
-                        <a class="btn btn-happy" href="https://www.daraz.com.bd/products/havit-h633bt-i466913375.html?spm=a2a0e.searchlist.list.9.584f47dbyj6MQg" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
+                        <a class="btn inline-flex items-center justify-center btn-happy" href="https://www.daraz.com.bd/products/havit-h633bt-i466913375.html?spm=a2a0e.searchlist.list.9.584f47dbyj6MQg" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
                     </div>
                 </div>
                 <div class="product-card card-happy">
-                    <div class="product-badge badge-happy">Top Pick</div>
+                    <div class="product-badge absolute top-4 left-4 px-3.5 py-1.5 rounded-full text-xs font-bold z-10 border tracking-wide badge-happy">Top Pick</div>
                     <div class="product-image">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">&#9825;</button>
                         <img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Vibrant Sneakers" loading="lazy">
                     </div>
-                    <div class="product-info">
+                    <div class="product-info p-6 text-center flex flex-col items-center flex-1">
                         <h3>Vibrant Sneakers</h3>
                         <p>Step out in style and spread the good vibes</p>
                         <p class="product-emotion">Walk in with confidence and color 🌈</p>
-                        <div class="product-price">
-                            <span class="price">৳9,900</span>
+                        <div class="product-price flex justify-center items-center gap-2 mt-auto mb-4 flex-wrap">
+                            <span class="price text-2xl font-black text-slate-50">৳9,900</span>
                             <span class="currency-note">BDT</span>
-                            <span class="old-price">৳16,500</span>
+                            <span class="old-price text-base text-slate-400 opacity-65 ml-1 line-through">৳16,500</span>
                         </div>
-                        <a class="btn btn-happy" href="https://www.amazon.com/Nike-Womens-AR3565-401-Orange-Metallic/dp/B0DP2M7X29/ref=sr_1_2?brr=1&dib=eyJ2IjoiMSJ9.xQVIrkKy1YI0eOFk3RHlHs72jwNmRJFPkYWaw8khV3gqD9dnFrzcjlaQnTD_eFJjQ_1BlMO4J4EQYe6X2NfGIRUv2pVtMMPKwQqaXOUNoFzhXnU7Mu3ERW1OnqbT5K6yjRfPDTiDrVPD-ABtIndeHNZyMnJgWVSqQA4Rg5x1M9Q.JYCHD02FMYBX5QdnqT27ZgU97O_fa9rRo5KdIr5WfHk&dib_tag=se&qid=1773929451&rd=1&s=apparel&sr=1-2" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
+                        <a class="btn inline-flex items-center justify-center btn-happy" href="https://www.amazon.com/Nike-Womens-AR3565-401-Orange-Metallic/dp/B0DP2M7X29/ref=sr_1_2?brr=1&dib=eyJ2IjoiMSJ9.xQVIrkKy1YI0eOFk3RHlHs72jwNmRJFPkYWaw8khV3gqD9dnFrzcjlaQnTD_eFJjQ_1BlMO4J4EQYe6X2NfGIRUv2pVtMMPKwQqaXOUNoFzhXnU7Mu3ERW1OnqbT5K6yjRfPDTiDrVPD-ABtIndeHNZyMnJgWVSqQA4Rg5x1M9Q.JYCHD02FMYBX5QdnqT27ZgU97O_fa9rRo5KdIr5WfHk&dib_tag=se&qid=1773929451&rd=1&s=apparel&sr=1-2" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
                     </div>
                 </div>
             </div>
@@ -245,51 +259,54 @@
             </div>
             <div class="products-grid">
                 <div class="product-card card-sad">
-                    <div class="product-badge badge-sad">Comforting</div>
+                    <div class="product-badge absolute top-4 left-4 px-3.5 py-1.5 rounded-full text-xs font-bold z-10 border tracking-wide badge-sad">Comforting</div>
                     <div class="product-image">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">&#9825;</button>
                         <img src="https://images.unsplash.com/photo-1674475762498-75310193b4f4" alt="Soft weighted blanket draped over a couch" loading="lazy">
                     </div>
-                    <div class="product-info">
+                    <div class="product-info p-6 text-center flex flex-col items-center flex-1">
                         <h3>Deep Calm Weighted Blanket</h3>
                         <p>Designed to ease stress and help you feel grounded 🤍</p>
                         <p class="product-emotion">Wrap yourself in calm and let your body exhale.</p>
-                        <div class="product-price">
-                            <span class="price">৳3,172</span>
+                        <div class="product-price flex justify-center items-center gap-2 mt-auto mb-4 flex-wrap">
+                            <span class="price text-2xl font-black text-slate-50">৳3,172</span>
                             <span class="currency-note">BDT</span>
                         </div>
-                        <a class="btn btn-sad" href="https://www.alibaba.com/product-detail/Luxury-Black-Weighted-Blanket-Super-Soft_1601676793203.html?spm=a2700.7724857.0.0.4f0517beCTW7Kf" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
+                        <a class="btn inline-flex items-center justify-center btn-sad" href="https://www.alibaba.com/product-detail/Luxury-Black-Weighted-Blanket-Super-Soft_1601676793203.html?spm=a2700.7724857.0.0.4f0517beCTW7Kf" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
                     </div>
                 </div>
                 <div class="product-card card-sad">
-                    <div class="product-badge badge-sad">Self-Care</div>
+                    <div class="product-badge absolute top-4 left-4 px-3.5 py-1.5 rounded-full text-xs font-bold z-10 border tracking-wide badge-sad">Self-Care</div>
                     <div class="product-image">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">&#9825;</button>
                         <img src="https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9" alt="Herbal tea set with calming ingredients" loading="lazy">
                     </div>
-                    <div class="product-info">
+                    <div class="product-info p-6 text-center flex flex-col items-center flex-1">
                         <h3>Relax &amp; Unwind Tea Kit</h3>
                         <p>A warm cup to slow down your thoughts ☕</p>
                         <p class="product-emotion">A quiet ritual for softer evenings and slower breaths.</p>
-                        <div class="product-price">
-                            <span class="price">৳159</span>
+                        <div class="product-price flex justify-center items-center gap-2 mt-auto mb-4 flex-wrap">
+                            <span class="price text-2xl font-black text-slate-50">৳159</span>
                             <span class="currency-note">BDT</span>
                         </div>
-                        <a class="btn btn-sad" href="https://www.alibaba.com/product-detail/Natural-Stone-Blended-Clearing-Herbal-Teas_1601635142946.html?spm=a2700.7724857.0.0.66ea7b44UuWCTX" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
+                        <a class="btn inline-flex items-center justify-center btn-sad" href="https://www.alibaba.com/product-detail/Natural-Stone-Blended-Clearing-Herbal-Teas_1601635142946.html?spm=a2700.7724857.0.0.66ea7b44UuWCTX" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
                     </div>
                 </div>
                 <div class="product-card card-sad">
-                    <div class="product-badge badge-sad">Relaxing</div>
+                    <div class="product-badge absolute top-4 left-4 px-3.5 py-1.5 rounded-full text-xs font-bold z-10 border tracking-wide badge-sad">Relaxing</div>
                     <div class="product-image">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">&#9825;</button>
                         <img src="https://images.unsplash.com/photo-1666934209818-cd6a6d08bd8d" alt="Silk sleep mask on soft pillow" loading="lazy">
                     </div>
-                    <div class="product-info">
+                    <div class="product-info p-6 text-center flex flex-col items-center flex-1">
                         <h3>Soft Dream Sleep Mask</h3>
                         <p>Block the world out and rest your mind 🌙</p>
                         <p class="product-emotion">Drift off faster and wake up feeling restored.</p>
-                        <div class="product-price">
-                            <span class="price">৳288</span>
+                        <div class="product-price flex justify-center items-center gap-2 mt-auto mb-4 flex-wrap">
+                            <span class="price text-2xl font-black text-slate-50">৳288</span>
                             <span class="currency-note">BDT</span>
                         </div>
-                        <a class="btn btn-sad" href="https://www.alibaba.com/product-detail/Sleep-Eye-Mask-3D-Weighted-Soft_1601298645073.html?spm=a2700.7724857.0.0.1ceb63f7tgtncO" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
+                        <a class="btn inline-flex items-center justify-center btn-sad" href="https://www.alibaba.com/product-detail/Sleep-Eye-Mask-3D-Weighted-Soft_1601298645073.html?spm=a2700.7724857.0.0.1ceb63f7tgtncO" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
                     </div>
                 </div>
             </div>
@@ -308,52 +325,55 @@
             </div>
             <div class="products-grid">
                 <div class="product-card card-adventure">
-                    <div class="product-badge badge-adventure">Explorer</div>
+                    <div class="product-badge absolute top-4 left-4 px-3.5 py-1.5 rounded-full text-xs font-bold z-10 border tracking-wide badge-adventure">Explorer</div>
                     <div class="product-image">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">&#9825;</button>
                         <img src="https://plus.unsplash.com/premium_photo-1723924948615-32f687c8cec1?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Backpack" loading="lazy">
                     </div>
-                    <div class="product-info">
+                    <div class="product-info p-6 text-center flex flex-col items-center flex-1">
                         <h3>Explorer Hiking Backpack</h3>
                         <p>Durable 50L backpack for any terrain</p>
                         <p class="product-emotion">Built for stories you'll tell for years 🧭</p>
-                        <div class="product-price">
-                            <span class="price">৳624</span>
+                        <div class="product-price flex justify-center items-center gap-2 mt-auto mb-4 flex-wrap">
+                            <span class="price text-2xl font-black text-slate-50">৳624</span>
                             <span class="currency-note">BDT</span>
                         </div>
-                        <a class="btn btn-adventure" href="https://www.daraz.com.bd/products/-i410377029.html?spm=a2a0e.searchlistcategory.list.1.50136a27qqdYHR" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
+                        <a class="btn inline-flex items-center justify-center btn-adventure" href="https://www.daraz.com.bd/products/-i410377029.html?spm=a2a0e.searchlistcategory.list.1.50136a27qqdYHR" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
                     </div>
                 </div>
                 <div class="product-card card-adventure">
-                    <div class="product-badge badge-adventure">Popular</div>
+                    <div class="product-badge absolute top-4 left-4 px-3.5 py-1.5 rounded-full text-xs font-bold z-10 border tracking-wide badge-adventure">Popular</div>
                     <div class="product-image">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">&#9825;</button>
                         <img src="https://images.unsplash.com/photo-1484506399805-c273b8e91dce?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Camera" loading="lazy">
                     </div>
-                    <div class="product-info">
+                    <div class="product-info p-6 text-center flex flex-col items-center flex-1">
                         <h3>Adventure Action Camera</h3>
                         <p>Capture every breathtaking moment in 4K clarity</p>
 
                         <p class="product-emotion">Catch every heartbeat of the journey 📸</p>
-                        <div class="product-price">
-                            <span class="price">৳2,100</span>
+                        <div class="product-price flex justify-center items-center gap-2 mt-auto mb-4 flex-wrap">
+                            <span class="price text-2xl font-black text-slate-50">৳2,100</span>
                             <span class="currency-note">BDT</span>
                         </div>
-                        <a class="btn btn-adventure" href="https://www.daraz.com.bd/products/4k-30m-wifi-i565943579.html?spm=a2a0e.searchlistcategory.list.1.6f7e4138QjRuht" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
+                        <a class="btn inline-flex items-center justify-center btn-adventure" href="https://www.daraz.com.bd/products/4k-30m-wifi-i565943579.html?spm=a2a0e.searchlistcategory.list.1.6f7e4138QjRuht" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
                     </div>
                 </div>
                 <div class="product-card card-adventure">
-                    <div class="product-badge badge-adventure">Essential</div>
+                    <div class="product-badge absolute top-4 left-4 px-3.5 py-1.5 rounded-full text-xs font-bold z-10 border tracking-wide badge-adventure">Essential</div>
                     <div class="product-image">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">&#9825;</button>
                         <img src="https://images.unsplash.com/photo-1631287381310-925554130169?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hiking Boots" loading="lazy">
                     </div>
-                    <div class="product-info">
+                    <div class="product-info p-6 text-center flex flex-col items-center flex-1">
                         <h3>Trail Hiking Boots</h3>
                         <p>Waterproof boots for rugged adventures</p>
                         <p class="product-emotion">Go farther with every confident step 🥾</p>
-                        <div class="product-price">
-                            <span class="price">৳3,890</span>
+                        <div class="product-price flex justify-center items-center gap-2 mt-auto mb-4 flex-wrap">
+                            <span class="price text-2xl font-black text-slate-50">৳3,890</span>
                             <span class="currency-note">BDT</span>
                         </div>
-                        <a class="btn btn-adventure" href="https://www.daraz.com.bd/products/-i349058126.html?spm=a2a0e.searchlistcategory.list.11.ae45e716lbLOn5" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
+                        <a class="btn inline-flex items-center justify-center btn-adventure" href="https://www.daraz.com.bd/products/-i349058126.html?spm=a2a0e.searchlistcategory.list.11.ae45e716lbLOn5" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
                     </div>
                 </div>
             </div>
@@ -372,52 +392,55 @@
             </div>
             <div class="products-grid">
                 <div class="product-card card-romantic">
-                    <div class="product-badge badge-romantic">20% Off</div>
+                    <div class="product-badge absolute top-4 left-4 px-3.5 py-1.5 rounded-full text-xs font-bold z-10 border tracking-wide badge-romantic">20% Off</div>
                     <div class="product-image">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">&#9825;</button>
                         <img src="https://images.unsplash.com/photo-1680503504111-1bbc7fc2103e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Perfume" loading="lazy">
                     </div>
-                    <div class="product-info">
+                    <div class="product-info p-6 text-center flex flex-col items-center flex-1">
                         <h3>Luxury Rose Perfume</h3>
                         <p>An enchanting fragrance for special moments</p>
                         <p class="product-emotion">A scent that lingers like a memory 🌹</p>
-                        <div class="product-price">
-                            <span class="price">৳799</span>
+                        <div class="product-price flex justify-center items-center gap-2 mt-auto mb-4 flex-wrap">
+                            <span class="price text-2xl font-black text-slate-50">৳799</span>
                             <span class="currency-note">BDT</span>
-                            <span class="old-price">৳999</span>
+                            <span class="old-price text-base text-slate-400 opacity-65 ml-1 line-through">৳999</span>
                         </div>
-                        <a class="btn btn-romantic" href="https://www.daraz.com.bd/products/amber-rose-natural-luxury-arabian-amber-rose-perfume-oil-attar-i1573951166.html?spm=a2a0e.searchlist.list.11.22a13f831bPI5T" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
+                        <a class="btn inline-flex items-center justify-center btn-romantic" href="https://www.daraz.com.bd/products/amber-rose-natural-luxury-arabian-amber-rose-perfume-oil-attar-i1573951166.html?spm=a2a0e.searchlist.list.11.22a13f831bPI5T" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
                     </div>
                 </div>
                 <div class="product-card card-romantic">
-                    <div class="product-badge badge-romantic">Romantic Pick</div>
+                    <div class="product-badge absolute top-4 left-4 px-3.5 py-1.5 rounded-full text-xs font-bold z-10 border tracking-wide badge-romantic">Romantic Pick</div>
                     <div class="product-image">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">&#9825;</button>
                         <img src="https://plus.unsplash.com/premium_photo-1681276170092-446cd1b5b32d?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Heart Pendant Necklace" loading="lazy">
                     </div>
-                    <div class="product-info">
+                    <div class="product-info p-6 text-center flex flex-col items-center flex-1">
                         <h3>Heart Pendant Necklace</h3>
                         <p>A timeless piece to express your love</p>
                         <p class="product-emotion">Say everything, without saying too much 💌</p>
-                        <div class="product-price">
-                            <span class="price">৳4,100</span>
+                        <div class="product-price flex justify-center items-center gap-2 mt-auto mb-4 flex-wrap">
+                            <span class="price text-2xl font-black text-slate-50">৳4,100</span>
                             <span class="currency-note">BDT</span>
                         </div>
-                        <a class="btn btn-romantic" href="https://www.amazon.com/Necklaces-Infinity-Birthstone-Sapphire-December/dp/B071DDXGYZ/ref=sr_1_2?dib=eyJ2IjoiMSJ9.hpqda808c2eZSOu-Md062DV3R00hcdL5ZJoLvV0CBUzIZY2sL_WYO_nQ5Zow9dtTO9ff29qaijWjNbsAbkMHrxciAt61W9RrDaceBlzaPoFtjuwTs-0VLKJxJFVqq5baglSAzzZ5VQGVQYmsyKW6fkmEidcDkNrTh8mMOg-C7KFaFmUYtL8IPDZH-71guz1IQ5yyfa5dGaBghBDBLCHhEB5Dj6IoNWQNZz1KKNnh_VvJJ81JtNrky9jza25u2JQ-IM1k_CwN-AoSMyOO6masnTvQV1PxH0opdkvsnu8qeEk.j9bMMKnaOaEpJfMpR9NOXzTqbO6MvsWy3_TQLwdCPy8&dib_tag=se&keywords=heart+pendant&qid=1773939661&sr=8-2" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
+                        <a class="btn inline-flex items-center justify-center btn-romantic" href="https://www.amazon.com/Necklaces-Infinity-Birthstone-Sapphire-December/dp/B071DDXGYZ/ref=sr_1_2?dib=eyJ2IjoiMSJ9.hpqda808c2eZSOu-Md062DV3R00hcdL5ZJoLvV0CBUzIZY2sL_WYO_nQ5Zow9dtTO9ff29qaijWjNbsAbkMHrxciAt61W9RrDaceBlzaPoFtjuwTs-0VLKJxJFVqq5baglSAzzZ5VQGVQYmsyKW6fkmEidcDkNrTh8mMOg-C7KFaFmUYtL8IPDZH-71guz1IQ5yyfa5dGaBghBDBLCHhEB5Dj6IoNWQNZz1KKNnh_VvJJ81JtNrky9jza25u2JQ-IM1k_CwN-AoSMyOO6masnTvQV1PxH0opdkvsnu8qeEk.j9bMMKnaOaEpJfMpR9NOXzTqbO6MvsWy3_TQLwdCPy8&dib_tag=se&keywords=heart+pendant&qid=1773939661&sr=8-2" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
                     </div>
                 </div>
                 <div class="product-card card-romantic">
-                    <div class="product-badge badge-romantic">Special Gift</div>
+                    <div class="product-badge absolute top-4 left-4 px-3.5 py-1.5 rounded-full text-xs font-bold z-10 border tracking-wide badge-romantic">Special Gift</div>
                     <div class="product-image">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">&#9825;</button>
                         <img src="https://images.unsplash.com/photo-1625552187571-7ee60ac43d2b?q=80&w=919&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gift Box" loading="lazy">
                     </div>
-                    <div class="product-info">
+                    <div class="product-info p-6 text-center flex flex-col items-center flex-1">
                         <h3>Premium Gift Box Set</h3>
                         <p>Curated gift box with chocolates & roses</p>
                         <p class="product-emotion">A ready-made smile in one beautiful box 🎁</p>
-                        <div class="product-price">
-                            <span class="price">৳378</span>
+                        <div class="product-price flex justify-center items-center gap-2 mt-auto mb-4 flex-wrap">
+                            <span class="price text-2xl font-black text-slate-50">৳378</span>
                             <span class="currency-note">BDT</span>
                         </div>
-                        <a class="btn btn-romantic" href="https://www.daraz.com.bd/products/naviforce-nf-004-i100454018.html?spm=a2a0e.searchlist.list.1.4dd74b14a9NpC1" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
+                        <a class="btn inline-flex items-center justify-center btn-romantic" href="https://www.daraz.com.bd/products/naviforce-nf-004-i100454018.html?spm=a2a0e.searchlist.list.1.4dd74b14a9NpC1" target="_blank" rel="noopener noreferrer">Buy Now 🛒</a>
                     </div>
                 </div>
             </div>
@@ -426,106 +449,95 @@
 
     <!-- ========== TESTIMONIALS ========== -->
     <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">What Our <span class="highlight-text">Shoppers</span> Say</h2>
-            <p class="section-subtitle">Real experiences from mood-based shoppers</p>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"I was feeling down and VibeNest suggested the coziest blanket ever. It felt like the website understood exactly what I needed."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar avatar-1">S</div>
-                        <div>
-                            <h4>Sarah Ahmed</h4>
-                            <span>Mood: 🤗 Comfort → Happy 😊</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Selected 'Adventurous' mood and found the perfect hiking gear for my trip to Cox's Bazar. Amazing concept!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar avatar-2">R</div>
-                        <div>
-                            <h4>Rahim Khan</h4>
-                            <span>Mood: 🧭 Adventurous</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Found the perfect anniversary gift in the Romantic section. My wife loved it! This is how shopping should be."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar avatar-3">K</div>
-                        <div>
-                            <h4>Kamal Hossain</h4>
-                            <span>Mood: 💕 Romantic</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <div class="max-w-[1200px] mx-auto px-5">
+            <h2 class="text-3xl md:text-4xl lg:text-4xl font-black text-center text-slate-50 mb-3">
+                What Our
+                <span class="bg-gradient-to-r from-purple-500 to-violet-400 bg-clip-text text-transparent">Shoppers</span>
+                Say
+            </h2>
+            <p class="text-center text-slate-400 mb-12">Real experiences from mood-based shoppers</p>
 
-    <!-- ========== NEWSLETTER ========== -->
-    <section class="newsletter" id="newsletter">
-        <div class="container">
-            <div class="newsletter-content">
-                <h2>LET'S STAY IN <span class="highlight-text">TOUCH</span></h2>
-                <p class="newsletter-subtitle">Get mood-based deals, self-care tips, and exclusive offers delivered to your inbox 💌</p>
-                <div class="newsletter-form">
-                    <div class="input-group">
-                        <input type="email" placeholder="Enter your email address" class="email-input">
-                        <button class="btn btn-send">Send 🚀</button>
+            <div class="flex flex-col md:flex-row gap-8 lg:gap-10 flex-wrap justify-center">
+                <div class="bg-slate-900/60 backdrop-blur-lg p-8 rounded-2xl flex-1 min-w-[280px] max-w-[380px] border border-slate-700/20 shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="text-lg mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-[15px] text-slate-300 leading-relaxed mb-5 italic">"I was feeling down and VibeNest suggested the coziest blanket ever. It felt like the website understood exactly what I needed."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center font-extrabold text-white text-lg">S</div>
+                        <div>
+                            <h4 class="text-[15px] font-bold text-slate-50">Sarah Ahmed</h4>
+                            <span class="text-[13px] text-slate-400">Mood: 🤗 Comfort → Happy 😊</span>
+                        </div>
                     </div>
                 </div>
-                <p class="newsletter-note">Join 10,000+ happy shoppers — no spam, we promise. 🤞</p>
+
+                <div class="bg-slate-900/60 backdrop-blur-lg p-8 rounded-2xl flex-1 min-w-[280px] max-w-[380px] border border-slate-700/20 shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="text-lg mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-[15px] text-slate-300 leading-relaxed mb-5 italic">"Selected 'Adventurous' mood and found the perfect hiking gear for my trip to Cox's Bazar. Amazing concept!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center font-extrabold text-white text-lg">R</div>
+                        <div>
+                            <h4 class="text-[15px] font-bold text-slate-50">Rahim Khan</h4>
+                            <span class="text-[13px] text-slate-400">Mood: 🧭 Adventurous</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900/60 backdrop-blur-lg p-8 rounded-2xl flex-1 min-w-[280px] max-w-[380px] border border-slate-700/20 shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="text-lg mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-[15px] text-slate-300 leading-relaxed mb-5 italic">"Found the perfect anniversary gift in the Romantic section. My wife loved it! This is how shopping should be."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center font-extrabold text-white text-lg">K</div>
+                        <div>
+                            <h4 class="text-[15px] font-bold text-slate-50">Kamal Hossain</h4>
+                            <span class="text-[13px] text-slate-400">Mood: 💕 Romantic</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <span class="logo-icon"><img src="assets/mood-icon.svg" alt="Mood icon"></span>
-                        <span class="logo-text">Vibe<span class="logo-highlight">Nest</span></span>
+        <div class="max-w-[1200px] mx-auto px-5">
+            <div class="flex flex-col md:flex-row gap-10 flex-wrap pb-5">
+                <div class="flex-[2] min-w-[250px] text-center md:text-left">
+                    <div class="flex items-center gap-2 justify-center md:justify-start">
+                        <span class="text-2xl font-extrabold text-white">Vibe<span class="text-purple-400">Nest</span></span>
                     </div>
-                    <p>World's first mood-based shopping experience. Because shopping should understand your emotions.</p>
-                    <p class="footer-story">We built VibeNest because we believe shopping should feel human, not robotic.</p>
+                    <p class="mt-2.5 text-slate-300 font-semibold">We built VibeNest because we believe shopping should feel human, not robotic.</p>
                 </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <a href="#home">Home</a>
-                    <a href="#mood-section">Shop by Mood</a>
-                    <a href="#how-it-works">How It Works</a>
-                    <a href="#newsletter">Contact</a>
+
+                <div class="flex-1 min-w-[150px] text-center md:text-left">
+                    <h4 class="text-white text-base font-bold mb-5">Quick Links</h4>
+                    <a href="#home" class="block text-slate-500 text-sm mb-2.5 hover:text-purple-300 transition-colors duration-300">Home</a>
+                    <a href="#mood-section" class="block text-slate-500 text-sm mb-2.5 hover:text-purple-300 transition-colors duration-300">Shop by Mood</a>
+                    <a href="#how-it-works" class="block text-slate-500 text-sm mb-2.5 hover:text-purple-300 transition-colors duration-300">How It Works</a>
                 </div>
-                <div class="footer-links">
-                    <h4>Mood Categories</h4>
-                    <a href="#happy-products">😊 Happy</a>
-                    <a href="#sad-products">🤗 Comfort</a>
-                    <a href="#adventure-products">🧭 Adventurous</a>
-                    <a href="#romantic-products">💕 Romantic</a>
+
+                <div class="flex-1 min-w-[150px] text-center md:text-left">
+                    <h4 class="text-white text-base font-bold mb-5">Mood Categories</h4>
+                    <a href="#happy-products" class="block text-slate-500 text-sm mb-2.5 hover:text-purple-300 transition-colors duration-300">😊 Happy</a>
+                    <a href="#sad-products" class="block text-slate-500 text-sm mb-2.5 hover:text-purple-300 transition-colors duration-300">🤗 Comfort</a>
+                    <a href="#adventure-products" class="block text-slate-500 text-sm mb-2.5 hover:text-purple-300 transition-colors duration-300">🧭 Adventurous</a>
+                    <a href="#romantic-products" class="block text-slate-500 text-sm mb-2.5 hover:text-purple-300 transition-colors duration-300">💕 Romantic</a>
                 </div>
-                <div class="footer-links">
-                    <h4>Support</h4>
-                    <a href="#">FAQ</a>
-                    <a href="#">Shipping Policy</a>
-                    <a href="#">Return Policy</a>
-                    <a href="#">Privacy Policy</a>
-                </div>
+
             </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2025 VibeNest. All rights reserved. Made with 💜 in Bangladesh</p>
-            </div>
         </div>
     </footer>
 
+    <div class="cart-toast" id="cart-toast">
+        ✅ Added to wishlist!
+    </div>
+
     <a href="#top" class="scroll-top-btn" aria-label="Back to top">↑</a>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
+
+
+
