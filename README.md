@@ -1,7 +1,7 @@
 <!-- ================= HEADER ================= -->
 
 <h1 align="center">🛍️ VibeNest</h1>
-<h2 align="center">✨ Mood-Based Shopping Experience</h2>
+<h2 align="center"> Mood-Based Shopping Experience</h2>
 
 ---
 
@@ -20,7 +20,7 @@
 
 ## 📌 Project Overview
 
-VibeNest is a **modern, responsive e-commerce landing page** that introduces a new way of shopping — based on **user mood**.
+VibeNest is a **modern, responsive e-commerce landing page** that introduces a new way of shopping - based on **user mood**.
 
 Instead of browsing endless products, users can explore items through emotions like **Happy, Comfort, Adventure, and Romantic**.
 The goal is to create a shopping experience that feels **simple, personal, and human-centered**.
@@ -157,33 +157,3 @@ Tailwind CSS
 
 ---
 
-<!-- ================= FUTURE ================= -->
-
-## 🌟 Future Improvements
-
-* 🤖 AI mood detection
-* 🛍️ Backend integration
-* 📱 Mobile app version
-* 🌐 Multi-language support
-
----
-
-<!-- ================= CONTRIBUTION ================= -->
-
-## 🤝 Contributing
-
-Feel free to fork this repo and submit a pull request.
-
----
-
-<!-- ================= LICENSE ================= -->
-
-## 📜 License
-
-This project is licensed under the **MIT License**.
-
----
-
-<!-- ================= FOOTER ================= -->
-
-<p align="center">💜 Made with creativity & vibes</p>
