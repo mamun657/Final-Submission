@@ -1,3 +1,343 @@
+/* ========== WELCOME / SPLASH SCREEN ========== */
+.welcome-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: #020617;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: opacity 0.8s ease, visibility 0.8s ease, transform 0.8s ease;
+}
+
+.welcome-bg-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    pointer-events: none;
+}
+
+.welcome-glow-1 {
+    width: 340px;
+    height: 340px;
+    top: -120px;
+    left: -100px;
+    background: rgba(139, 92, 246, 0.35);
+    animation: welcomeGlowPulse 4.2s ease-in-out infinite;
+}
+
+.welcome-glow-2 {
+    width: 280px;
+    height: 280px;
+    bottom: -100px;
+    right: -80px;
+    background: rgba(236, 72, 153, 0.28);
+    animation: welcomeGlowPulse 5s ease-in-out infinite 0.8s;
+}
+
+.welcome-glow-3 {
+    width: 240px;
+    height: 240px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(96, 165, 250, 0.2);
+    animation: welcomeCenterPulse 5.6s ease-in-out infinite;
+}
+
+@keyframes welcomeGlowPulse {
+    0%, 100% { opacity: 0.45; transform: scale(1); }
+    50% { opacity: 0.9; transform: scale(1.18); }
+}
+
+@keyframes welcomeCenterPulse {
+    0%, 100% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.2); }
+}
+
+.welcome-floating-emojis {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.w-float-emoji {
+    position: absolute;
+    font-size: 30px;
+    opacity: 0.32;
+    animation: welcomeEmojiFloat 6s ease-in-out infinite;
+}
+
+.w-emoji-1 { top: 11%; left: 10%; animation-delay: 0s; }
+.w-emoji-2 { top: 16%; right: 11%; animation-delay: 1s; }
+.w-emoji-3 { bottom: 17%; left: 8%; animation-delay: 2s; }
+.w-emoji-4 { bottom: 14%; right: 10%; animation-delay: 3s; }
+
+@keyframes welcomeEmojiFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-18px) rotate(5deg); }
+    75% { transform: translateY(10px) rotate(-4deg); }
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    text-align: center;
+    animation: welcomeFadeIn 1s ease both;
+}
+
+.welcome-logo-wrapper {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-logo-circle {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    opacity: 0.18;
+    animation: welcomeLogoPulse 3s ease-in-out infinite;
+}
+
+.welcome-logo-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 0 14px rgba(168, 85, 247, 0.45));
+    animation: welcomeLogoFloat 3s ease-in-out infinite;
+}
+
+.welcome-title {
+    font-family: 'Sora', 'Manrope', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    color: #f8fafc;
+    letter-spacing: -0.4px;
+}
+
+.welcome-highlight {
+    background: linear-gradient(135deg, #a855f7, #6c5ce7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.welcome-tagline {
+    font-size: 18px;
+    color: #c4b5fd;
+    font-weight: 600;
+}
+
+.welcome-mood-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-width: 380px;
+    margin: 6px 0 10px;
+    animation: welcomeFadeIn 1s ease both;
+    animation-delay: 0.6s;
+    opacity: 0;
+}
+
+.w-pill {
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: default;
+}
+
+.w-pill:hover {
+    transform: scale(1.1);
+}
+
+.w-pill-happy {
+    background: rgba(251, 191, 36, 0.14);
+    border-color: rgba(251, 191, 36, 0.45);
+    color: #fef3c7;
+}
+
+.w-pill-happy:hover {
+    box-shadow: 0 0 14px rgba(251, 191, 36, 0.3);
+}
+
+.w-pill-comfort {
+    background: rgba(96, 165, 250, 0.14);
+    border-color: rgba(96, 165, 250, 0.45);
+    color: #dbeafe;
+}
+
+.w-pill-comfort:hover {
+    box-shadow: 0 0 14px rgba(96, 165, 250, 0.3);
+}
+
+.w-pill-adventure {
+    background: rgba(52, 211, 153, 0.14);
+    border-color: rgba(52, 211, 153, 0.45);
+    color: #d1fae5;
+}
+
+.w-pill-adventure:hover {
+    box-shadow: 0 0 14px rgba(52, 211, 153, 0.3);
+}
+
+.w-pill-romantic {
+    background: rgba(244, 114, 182, 0.14);
+    border-color: rgba(244, 114, 182, 0.45);
+    color: #fce7f3;
+}
+
+.w-pill-romantic:hover {
+    box-shadow: 0 0 14px rgba(244, 114, 182, 0.3);
+}
+
+.welcome-enter-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 36px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 28px rgba(124, 58, 237, 0.48);
+    position: relative;
+    overflow: hidden;
+    animation: welcomeBtnGlow 2.5s ease-in-out infinite 2s;
+}
+
+.welcome-enter-btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 40%,
+        rgba(255, 255, 255, 0.12) 50%,
+        transparent 60%
+    );
+    animation: welcomeBtnShimmer 3s ease-in-out infinite 2s;
+}
+
+.welcome-enter-btn:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 0 24px rgba(167, 139, 250, 0.6), 0 12px 30px rgba(109, 40, 217, 0.5);
+}
+
+@keyframes welcomeBtnShimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+@keyframes welcomeBtnGlow {
+    0%, 100% {
+        box-shadow: 0 8px 28px rgba(124, 58, 237, 0.48),
+                    0 0 0 0 rgba(167, 139, 250, 0.35);
+    }
+    50% {
+        box-shadow: 0 8px 28px rgba(124, 58, 237, 0.48),
+                    0 0 0 14px rgba(167, 139, 250, 0);
+    }
+}
+
+.welcome-loader {
+    width: 160px;
+    height: 3px;
+    background: rgba(30, 41, 59, 0.9);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 6px;
+}
+
+.welcome-loader-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #a855f7, #ec4899, #60a5fa);
+    border-radius: 10px;
+    animation: welcomeLoad 2.6s ease-in-out infinite;
+}
+
+@keyframes welcomeLoad {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+@keyframes welcomeFadeIn {
+    from { opacity: 0; transform: translateY(24px) scale(0.96); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes welcomeLogoPulse {
+    0%, 100% { opacity: 0.15; transform: scale(1); }
+    50% { opacity: 0.26; transform: scale(1.22); }
+}
+
+@keyframes welcomeLogoFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 640px) {
+    .welcome-title {
+        font-size: 36px;
+    }
+
+    .welcome-tagline {
+        font-size: 15px;
+        max-width: 280px;
+    }
+
+    .welcome-logo-wrapper {
+        width: 72px;
+        height: 72px;
+    }
+
+    .welcome-logo-img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .welcome-enter-btn {
+        padding: 13px 30px;
+        font-size: 15px;
+    }
+
+    .w-pill {
+        font-size: 11px;
+        padding: 4px 11px;
+    }
+
+    .welcome-mood-pills {
+        max-width: 280px;
+    }
+
+    .w-float-emoji {
+        font-size: 24px;
+        opacity: 0.24;
+    }
+}
+
 /* ========== RESET & BASE ========== */
 * {
     margin: 0;
@@ -25,7 +365,13 @@ body {
     line-height: 1.6;
     color: var(--text-primary);
     overflow-x: hidden;
+    animation: fadeIn 0.6s ease;
     background: radial-gradient(circle at 15% 0%, rgba(79, 70, 229, 0.16), transparent 30%), radial-gradient(circle at 85% 10%, rgba(236, 72, 153, 0.12), transparent 26%), var(--bg-base);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 a {
