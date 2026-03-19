@@ -338,6 +338,16 @@
     }
 }
 
+@media (max-width: 992px) and (min-width: 641px) {
+    .welcome-title {
+        font-size: 42px;
+    }
+
+    .welcome-mood-pills {
+        max-width: 340px;
+    }
+}
+
 /* ========== RESET & BASE ========== */
 * {
     margin: 0;
@@ -797,7 +807,7 @@ img {
     position: absolute;
     font-size: 30px;
     animation: float 4s ease-in-out infinite;
-    opacity: 0.6;
+    opacity: 0.4;
 }
 
 .emoji-1 { top: -20px; left: 20px; animation-delay: 0s; }
@@ -1168,8 +1178,8 @@ img {
     padding: 80px 0;
     opacity: 1;
     transform: translateY(0);
-    max-height: 1800px;
-    overflow: hidden;
+    max-height: none;
+    overflow: visible;
     transition: opacity 0.32s ease, transform 0.32s ease, max-height 0.42s ease;
 }
 
@@ -1177,6 +1187,7 @@ img {
     opacity: 0;
     transform: translateY(20px);
     max-height: 0;
+    overflow: hidden;
     padding-top: 0;
     padding-bottom: 0;
     margin: 0;
@@ -1677,7 +1688,7 @@ input:focus-visible {
     z-index: 999;
     box-shadow: 0 8px 24px rgba(124, 58, 237, 0.4);
     transition: all 0.3s ease;
-    opacity: 0.85;
+    opacity: 0.7;
 }
 
 .scroll-top-btn:hover {
@@ -1815,6 +1826,12 @@ body.light-theme .cart-chip {
         visibility: visible;
     }
 
+    .mobile-menu a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
     .menu-checkbox:checked + .hamburger span:nth-child(1) {
         transform: rotate(45deg) translate(6px, 6px);
     }
@@ -1917,6 +1934,31 @@ body.light-theme .cart-chip {
     }
 }
 
+/* ========== RESPONSIVE - TABLET PORTRAIT (641px-768px) ========== */
+@media (max-width: 768px) and (min-width: 641px) {
+    .mood-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .mood-card {
+        min-width: auto;
+        max-width: 100%;
+    }
+
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .product-card {
+        max-width: 100%;
+        min-width: auto;
+    }
+}
+
 /* ========== RESPONSIVE - MOBILE (max-width: 640px) ========== */
 @media (max-width: 640px) {
     .container {
@@ -1998,6 +2040,8 @@ body.light-theme .cart-chip {
 
     .hero-image {
         min-height: 220px;
+        overflow: hidden;
+        padding: 10px;
     }
 
     .hero-illustration {
@@ -2021,6 +2065,14 @@ body.light-theme .cart-chip {
 
     .illustration-box p {
         font-size: 10px;
+    }
+
+    .box-3 {
+        left: 0;
+    }
+
+    .box-4 {
+        right: 0;
     }
 
     .float-emoji {
@@ -2091,6 +2143,12 @@ body.light-theme .cart-chip {
         height: 200px;
     }
 
+    .wishlist-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 20px;
+    }
+
     .btn {
         min-height: 44px;
         display: inline-flex;
@@ -2125,11 +2183,18 @@ body.light-theme .cart-chip {
     }
 
     .scroll-top-btn {
-        width: 42px;
-        height: 42px;
-        bottom: 20px;
-        right: 20px;
+        width: 40px;
+        height: 40px;
+        bottom: 16px;
+        right: 16px;
         font-size: 18px;
+    }
+
+    .cart-toast {
+        right: 16px;
+        bottom: 64px;
+        left: 16px;
+        text-align: center;
     }
 
     /* Steps */
@@ -2139,6 +2204,41 @@ body.light-theme .cart-chip {
 
     /* Testimonials */
     /* Footer */
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        padding: 20px 0;
+        min-height: auto;
+    }
+
+    .hero-image {
+        min-height: 180px;
+    }
+
+    .hero-illustration {
+        width: 160px;
+        height: 160px;
+    }
+
+    .illustration-circle {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    .hero-illustration {
+        transform: scale(0.9);
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
 }
 
 /* ========== RESPONSIVE - SMALL MOBILE (max-width: 320px) ========== */
