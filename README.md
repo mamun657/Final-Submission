@@ -52,10 +52,10 @@ The goal is to create a shopping experience that feels **simple, personal, and h
 3. Shop  
 
 ### 💡 Mood Categories
-- Happy  
-- Comfort  
-- Adventure  
-- Romantic  
+- 😊 Happy  
+- 🤗 Comfort  
+- 🧭 Adventure  
+- 💕 Romantic  
 
 ### 🛒 Product Sections
 - Product cards with image, title, price  
@@ -71,10 +71,47 @@ The goal is to create a shopping experience that feels **simple, personal, and h
 
 ## 🎨 UI Highlights
 
-- Dark modern UI  
-- Smooth animations  
-- Clean layout  
-- Fully responsive  
+- 🌙 Dark modern UI  
+- ✨ Smooth animations  
+- 🧼 Clean layout  
+- 📱 Fully responsive  
+
+---
+
+## 📸 Screenshots  
+
+### 🏠 Home & Hero Section
+<img src="https://github.com/user-attachments/assets/15e66225-6465-40d1-ae9b-ecc4e90db08a" />
+
+<img src="https://github.com/user-attachments/assets/515d504a-fff6-4226-9cd8-55849ef22fab" />
+
+---
+
+### 💡 Mood Selection & Experience
+<img src="https://github.com/user-attachments/assets/e1761c2c-9ffe-4278-aa62-1bcbaa6323c4" />
+
+<img src="https://github.com/user-attachments/assets/a8fe5b74-297b-42cf-af17-da4429e4605c" />
+
+---
+
+### 🛒 Product Showcase
+<img src="https://github.com/user-attachments/assets/71d11e29-136c-4656-a513-5602959609f6" />
+
+<img src="https://github.com/user-attachments/assets/cab4ea00-456e-417f-bcaa-7848d1a6de01" />
+
+---
+
+### 💬 Testimonials & UI Sections
+<img src="https://github.com/user-attachments/assets/0cc9a008-a3a7-4928-a1db-fc0225d588cb" />
+
+<img src="https://github.com/user-attachments/assets/b86346bb-d462-4e14-8d1d-d99d507dff12" />
+
+---
+
+### 🔻 Footer
+<img src="https://github.com/user-attachments/assets/32511631-6eae-4915-9b41-38c905712dac" />
+
+<img src="https://github.com/user-attachments/assets/56d16f78-9be2-4fd1-b377-78d1ffdee83a" />
 
 ---
 
