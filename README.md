@@ -132,5 +132,6 @@ The goal is to create a shopping experience that feels **simple, personal, and h
 HTML5
 CSS3
 Tailwind CSS
+```
 
 
